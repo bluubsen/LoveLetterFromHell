@@ -62,11 +62,42 @@ body {
 
 /*end general styles*/
 
+/*Background gradients*/
+
+.murdered-out-black-gradient {
+  background: -webkit-linear-gradient(360deg, #030303 10%, #1f1f1f 360%);
+  background: linear-gradient(360deg, #030303 10%, #1f1f1f 360%);
+}
+
+.classy-subtle-dark-gray-gradient {
+  background: -webkit-linear-gradient(360deg, #383836 10%, #4a4a4a 360%);
+  background: linear-gradient(360deg, #383836 10%, #4a4a4a 360%);
+}
+
+.black-chrome-gradient {
+  background: -webkit-linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
+  background: -moz-linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
+  background: linear-gradient(360deg, #1C1C1C 10%, #494949 360%);
+}
+
+.custom-background-gradient {
+  background: -webkit-linear-gradient(360deg, #181818, transparent),
+  -webkit-linear-gradient(#0F0300, #000000);
+  background: -moz-linear-gradient(360deg, #181818, transparent),
+  -moz-linear-gradient(#0F0300, #000000);
+  background: linear-gradient(#181818, transparent),
+  linear-gradient(#0F0300, #000000);
+}
+
+/*End background styles*/
+
+
 /*Layout styles*/
 
 main {
   min-height: 100vh;
-  background-color: red;
+  /*background: linear-gradient(#181818, transparent),*/
+  /*  !*linear-gradient(#161616, transparent),*! linear-gradient(#0F0300, #000000);*/
   padding-top: 5rem;
 }
 
@@ -98,12 +129,12 @@ main {
 }
 
 .three {
-  grid-column: 1;
-  grid-row: 2 / 5;
+  grid-column: 1 / 4;
+  grid-row: 3;
 }
 .four {
-  grid-column: 3;
-  grid-row: 3;
+  grid-column: 1;
+  grid-row: 4;
 }
 .five {
   grid-column: 2;
