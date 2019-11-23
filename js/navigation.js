@@ -7,3 +7,20 @@ function scrollFunction() {
         document.getElementById("navbar").style.top = "-5rem";
     }
 }
+
+function toggleAsideWidget() {
+    let asideButton = document.getElementById('aside-button');
+    let asideWidget = document.getElementById('aside-widget');
+
+    if (asideWidget.style.display === 'block') {
+        //close aside widget
+        asideWidget.style.display = 'none';
+        asideButton.classList.remove('scale-in-center');
+        asideButton.style.display = 'flex';
+    } else {
+        //open aside widget
+        asideButton.style.display = 'none';
+        asideWidget.style.display = 'block';
+
+    }
+}
