@@ -12,15 +12,20 @@ function toggleAsideWidget() {
     let asideButton = document.getElementById('aside-button');
     let asideWidget = document.getElementById('aside-widget');
 
-    if (asideWidget.style.display === 'block') {
+    if (asideWidget.classList.contains('slide-in-right-short')) {
         //close aside widget
-        asideWidget.style.display = 'none';
-        asideButton.classList.remove('scale-in-center');
+        asideWidget.classList.remove('slide-in-right-short');
+        asideWidget.classList.add('slide-out-right');
+        asideButton.classList.remove('flicker-out-1');
         asideButton.style.display = 'flex';
+        asideButton.classList.add('puff-in-center');
     } else {
         //open aside widget
-        asideButton.style.display = 'none';
+        // asideButton.style.display = 'none';
+        asideButton.classList.remove('scale-in-center');
+        asideButton.classList.add('flicker-out-1');
         asideWidget.style.display = 'block';
-
+        asideWidget.classList.remove('slide-out-right');
+        asideWidget.classList.add('slide-in-right-short')
     }
 }
